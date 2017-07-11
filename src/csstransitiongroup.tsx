@@ -19,7 +19,9 @@ export class CSSTransitionGroup extends Component<CSSTransitionGroupProps, {}> {
     component: "div",
   };
   private mounted = false;
-  public componentDidMount = () => this.mounted = true;
+  public componentDidMount() {
+    this.mounted = true;
+  }
 
   public render() {
     const { transitionAppear, children, ...rest } = this.props as any;
